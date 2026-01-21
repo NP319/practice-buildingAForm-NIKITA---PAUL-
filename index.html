@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Feedback Form</title>
+</head>
+<body>
+
+    <h1>Website Feedback Form</h1>
+
+    <form action="/submit" method="post">
+
+        <!-- User Information -->
+        <fieldset>
+            <legend>User Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input 
+                type="text" 
+                id="fullname" 
+                name="fullname" 
+                placeholder="Enter your full name" 
+                required 
+                minlength="3" 
+                maxlength="50"
+            >
+
+            <br><br>
+
+            <label for="email">Email Address:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email address" 
+                required
+            >
+
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Enter your password" 
+                required 
+                minlength="6"
+            >
+        </fieldset>
+
+        <br>
+
+        <!-- Feedback Category -->
+        <fieldset>
+            <legend>Feedback Details</legend>
+
+            <label for="category">Feedback Category:</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select a category --</option>
+                <option value="bug">Bug Report</option>
+                <option value="feature" selected>Feature Request</option>
+                <option value="general">General Feedback</option>
+            </select>
+
+            <br><br>
+
+            <!-- Preferred Contact Method -->
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+
+                <label for="contact-email">
+                    <input 
+                        type="radio" 
+                        id="contact-email" 
+                        name="contact_method" 
+                        value="email" 
+                        checked
+                    >
+                    Email
+                </label>
+
+                <br>
+
+                <label for="contact-phone">
+                    <input 
+                        type="radio" 
+                        id="contact-phone" 
+                        name="contact_method" 
+                        value="phone"
+                    >
+                    Phone
+                </label>
+            </fieldset>
+
+            <br>
+
+            <!-- Additional Features -->
+            <fieldset>
+                <legend>Additional Features of Interest</legend>
+
+                <label for="notifications">
+                    <input 
+                        type="checkbox" 
+                        id="notifications" 
+                        name="features" 
+                        value="notifications" 
+                        checked
+                    >
+                    Email Notifications
+                </label>
+
+                <br>
+
+                <label for="darkmode">
+                    <input 
+                        type="checkbox" 
+                        id="darkmode" 
+                        name="features" 
+                        value="dark_mode"
+                    >
+                    Dark Mode
+                </label>
+
+                <br>
+
+                <label for="analytics">
+                    <input 
+                        type="checkbox" 
+                        id="analytics" 
+                        name="features" 
+                        value="analytics"
+                    >
+                    Usage Analytics
+                </label>
+            </fieldset>
+        </fieldset>
+
+        <br>
+
+        <!-- Comments -->
+        <fieldset>
+            <legend>Additional Comments</legend>
+
+            <label for="comments">Comments:</label>
+            <br>
+            <textarea 
+                id="comments" 
+                name="comments" 
+                rows="5" 
+                cols="40" 
+                placeholder="Write your feedback here..."
+                maxlength="300"
+            ></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit Feedback">
+
+    </form>
+
+</body>
+</html>
